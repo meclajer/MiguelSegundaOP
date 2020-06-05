@@ -65,6 +65,8 @@ public class FragmentHistorial extends Fragment {
 
         luz = getView().findViewById(R.id.valIluminacion);
 
+        consultarBD();
+
         consultar = getView().findViewById(R.id.btnConsultar);
         consultar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,7 +108,6 @@ public class FragmentHistorial extends Fragment {
                 Toast.makeText(getActivity(), "Consulta cancelada...", Toast.LENGTH_SHORT);
             }
         });
-
     }
 
 }

@@ -119,8 +119,6 @@ public class FragmentEstadoActual extends Fragment implements SensorEventListene
         mSensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
         acelerometro = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
-        Log.i( "EVENTO", "manager creado" );
-        //Principales Sensores de movimiento
         acelerometro = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mSensorManager.registerListener(this, acelerometro, SensorManager.SENSOR_DELAY_NORMAL);
         acelerometroLinear = mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
@@ -176,6 +174,7 @@ public class FragmentEstadoActual extends Fragment implements SensorEventListene
 
             }
         });
+
         continua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -202,7 +201,7 @@ public class FragmentEstadoActual extends Fragment implements SensorEventListene
                 valY.setText( formato.format(event.values[1]) + " m/s^2" );
                 valZ.setText( formato.format(event.values[2]) + " m/s^2" );
 
-                if(capturar){
+                if(capturar && swAcelerometro.isChecked()){
                     registro.setSensor("ACCELEROMETER");
                     registro.setValor("X: "+ formato.format(event.values[0]) + " m/s^2" + ", Y: " + formato.format(event.values[1]) + " m/s^2" + ", Z: " + formato.format(event.values[2]) + " m/s^2.");
                     registro.setHora( hourFormat.format(date) );
@@ -217,7 +216,7 @@ public class FragmentEstadoActual extends Fragment implements SensorEventListene
                 valAcelY.setText( formato.format(event.values[1]) + " m/s^2" );
                 valAcelZ.setText( formato.format(event.values[2]) + " m/s^2" );
 
-                if(capturar){
+                if(capturar && swAceleracion.isChecked()){
                     Log.i("Estado","Cantidad: "+cantidadCapturas);
                     registro.setSensor("LINEAR_ACCELERATION");
                     registro.setValor("X: "+ formato.format(event.values[0]) + " m/s^2" + ", Y: " + formato.format(event.values[1]) + " m/s^2" + ", Z: " + formato.format(event.values[2]) + " m/s^2.");
@@ -232,7 +231,7 @@ public class FragmentEstadoActual extends Fragment implements SensorEventListene
             case Sensor.TYPE_STEP_COUNTER:
                 cantPasos.setText( event.values[0] + "" );
 
-                if(capturar){
+                if(capturar && swPodometro.isChecked()){
                     registro.setSensor("STEP_COUNTER");
                     registro.setValor( formato.format(event.values[0]) + " pasos.");
                     registro.setHora(hourFormat.format(date));
@@ -247,7 +246,7 @@ public class FragmentEstadoActual extends Fragment implements SensorEventListene
             case Sensor.TYPE_PROXIMITY:
                 distancia.setText( formato.format(event.values[0]) + " cm" );
 
-                if(capturar){
+                if(capturar  && swProximidad.isChecked()){
                     registro.setSensor("PROXIMITY");
                     registro.setValor( formato.format(event.values[0]) + " cm.");
                     registro.setHora(hourFormat.format(date));
@@ -262,7 +261,7 @@ public class FragmentEstadoActual extends Fragment implements SensorEventListene
             case Sensor.TYPE_AMBIENT_TEMPERATURE:
                 ambiente.setText( event.values[0] + " °C" );
 
-                if(capturar){
+                if(capturar  && swtemperatura.isChecked()){
                     registro.setSensor("AMBIENT_TEMPERATURE");
                     registro.setValor( formato.format(event.values[0]) + " °C.");
                     registro.setHora(hourFormat.format(date));
@@ -276,7 +275,7 @@ public class FragmentEstadoActual extends Fragment implements SensorEventListene
             case Sensor.TYPE_LIGHT:
                 luz.setText( event.values[0] + " lx" );
 
-                if(capturar){
+                if(capturar  && swIluminacion.isChecked()){
                     Log.i("Estado","Cantidad: "+cantidadCapturas);
                     registro.setSensor("LIGHT");
                     registro.setValor( formato.format(event.values[0]) + " lx.");
