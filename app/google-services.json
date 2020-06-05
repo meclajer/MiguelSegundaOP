@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "68762630273",
+    "firebase_url": "https://progmovilsegundaop.firebaseio.com",
+    "project_id": "progmovilsegundaop",
+    "storage_bucket": "progmovilsegundaop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68762630273:android:2f45e2e354834b478e3580",
+        "android_client_info": {
+          "package_name": "com.meclajerpc.miguelsegundaop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68762630273-18818368pcd2tkcc22hgctv5ul0p33fp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRKorg2h-xnPVCgQpK0Q4W07XnqgM3oek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68762630273-18818368pcd2tkcc22hgctv5ul0p33fp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

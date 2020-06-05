@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">MiguelSegundaOP</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Hardware</string>
+    <string name="menu_gallery">Monitoreo</string>
+    <string name="menu_slideshow">Historial</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="txt_sencoresDisp">Sensores disponibles</string>
+
+    <string name="txt_titulo">Estado de los sensores</string>
+    <string name="txtAcelerometro">Acelerometro</string>
+    <string name="txt_acelerometerInX">Valor en X:</string>
+    <string name="txt_acelerometerInY">Valor en Y:</string>
+    <string name="txt_acelerometerInZ">Valor en Z:</string>
+    <string name="txt_aceleracion">Aceleración</string>
+    <string name="txtPodometro">Podómetro</string>
+    <string name="txt_pasos">Pasos</string>
+    <string name="txtProximidad">Proximidad</string>
+    <string name="txt_Distancia">Distancia</string>
+    <string name="txt_Temperaturas">Temperaturas</string>
+    <string name="txt_Iluminacion">Iluminacion</string>
+    <string name="datoIluminacion">Iluminacion</string>
+    <string name="datoAmbiente">Ambiental</string>
+    <string name="datoDispositivo">Dispositivo</string>
+    <string name="txt_NoDisponible">No Disponible</string>
+    <string name="txt_UnRegistroCompleto">Guardar Datos</string>
+    <string name="btn_100Cambios">Capturar 100 Cambios</string>
+
+    <string name="swich">Almacenar</string>
+
+    <string name="historial">Ultima Actualización</string>
+    <string name="dato">Valor:</string>
+    <string name="consulta">Actualizar datos</string>
+
+    <string name="alumno">Alumno:</string>
+    <string name="usuario">Castillo Landeros Miguel Eduardo.</string>
+
+</resources>
